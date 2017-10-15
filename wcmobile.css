@@ -1,0 +1,116 @@
+/*
+   New Perspectives on HTML and CSS
+   Tutorial 8
+   Case Problem 2
+
+   Mobile Styles
+   Author: Shannon O'Donnell
+   Date:   10/15/17
+
+   Filename:         wcmobile.css
+   Supporting Files: 
+
+*/
+
+/*make a rule to hide the navigation list in the header, 
+the inline image in the header, 
+the main section, 
+the aside element, 
+and the page footer*/
+
+.horizontal, #main, aside, footer, img {
+	display: none;
+}
+
+/*Set the background color to rgb(107,140,80)*/
+html {
+	background-color: rgb(107,140,80);
+}
+
+/*For the header element create a style rule to
+change the background olor to rgb(151,201,151)
+with the image willet.jpg placed in the left-center with no tiling
+set the size of the background image to contain
+set the width to 100%
+set the height to 50px*/
+
+header {
+	background: rgb(151,201,151) url('willet.jpg') left center no-repeat;
+	background-size: contain;
+	width: 100%;
+	height: 80px;
+}
+
+/*The navigation list containing links to each of the 18 holes in the Grand Course has the id holes.
+Create a style rule to set the width of this navigation list to 100%*/
+#holes {
+	width:100%
+}
+
+/*For the h1 elements within the holes nav list create a style tule to
+set the font size to 25px
+set the font color to white
+set the margin to 15px
+center the text of the heading*/
+#holes h1 {
+	font-size: 25px;
+	color: white;
+	margin: 15px;
+	text-align: center;
+}
+
+/*For list items in the navigation list, create a rule to
+display the items as blocks
+add the backgound image file arrow.png to the right-center of the background with no tiling
+set the width to 60% and the height to 50px
+add top and bottom margins of 5px and left and right margins of auto
+add a 1-pixel-wide solid white border to each list item and create rounded borders wit a radius of 10px
+add inset box shadows with a color value of rgb(51,51,51) and an opacity of 50%
+(inset shadows should be in the lower-left corner of each item with a horizontal offset of 10px
+vetical offset of 5px
+and blur of 20px*/
+#holes li {
+	display: block;
+	background: url(arrow.png) right center no-repeat;
+	width: 60%;
+	height: 50px;
+	margin: 5px auto;
+	border: 1px solid white;
+	border-style: round;
+	border-radius: 10px;
+	box-shadow: inset rgba(51,51,51,.5) -10px -5px 20px;
+}
+
+/*For hyperlinks within each list item add a style rule to
+display the link as blocks
+set the width to 100% and line-height to 50px
+set the font color to white
+and horizontally center the text of the link.*/
+#holes li a {
+	display: block;
+	width: 100%;
+	line-height: 50px;
+	color: white;
+	text-align: center;
+}
+
+/*For odd-numbered list set the background color to rgb(187,105,123)*/
+#holes li:nth-child(odd) {
+	background-color: rgb(187,105,123);
+}
+
+/*For even-numbered list set the background color to rgb(150,80,100)*/
+#holes li:nth-child(even) {
+	background-color: rgb(150,80,100);
+}
+
+/*Create an @media rule for the page in landscape orientation*/
+@media screen and (orientation: landscape) {
+/*In landscape prientation, the list items should display as
+30% with items floated left and margins of 5px*/
+	#holes li {
+		width: 30%;
+		float: left;
+		margin: 5px;
+	}
+}

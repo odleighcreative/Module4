@@ -1,0 +1,40 @@
+/*
+   New Perspectives on HTML and CSS
+   Tutorial 8
+   Case Problem 2
+
+   Special Effects style sheet
+   Author: Shannon O'Donnell
+   Date:   10/15/17
+
+   Filename:         wceffects.css
+   Supporting Files: 
+
+*/
+
+body {
+	/*add shadow effect containing 2 box shadows both with
+	a color value of rgb(31,61,31) and an opacity of 0.9
+	place first shadow with horizontal offset of 20px
+	vertical offset of 0px and a blur of 25px
+	Second shadow should be the same except a horizontal offset of -20px*/
+	box-shadow: rgba(31, 61, 31, 0.9) 20px 0px 25px,
+	rgba(31, 61, 31, 0.9) -20px 0px 25px;
+}
+
+div {
+	/*set opacity of div elements nested within the aside element tp 75%
+	Use both the css3 opacity style and the IE Alpha filter
+	Add a box shadow that has a color value of rgb(101,101,101)
+	with an opacity of .7
+	Set horizontal and vertical offset to 5px
+	and blur to 10px
+	No need to add IE filter for the box shadow*/
+	Alpha: progid:DXImageTransorm.Microsoft.filter(opacity=".75");
+	opacity:.75;
+	box-shadow: rgba(101,101,101,0.7) 5px 5px 10px;
+}
+
+#holes li a:hover {
+   font-weight: bold;
+}
